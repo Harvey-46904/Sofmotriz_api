@@ -1,0 +1,405 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Api Softmotriz",
+        "description": "rutas de api para consumir",
+        "contact": {
+            "email": "harveympv@hotmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost/Softmotriz/public",
+            "description": " API Server"
+        }
+    ],
+    "paths": {
+        "/api/Schooling": {
+            "get": {
+                "tags": [
+                    "Schooling"
+                ],
+                "summary": "Mostrar todos los niveles de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Schooling"
+                ],
+                "summary": "Registrar nivel de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        },
+        "/api/Schoolings/{Schooling_id}": {
+            "get": {
+                "tags": [
+                    "Schooling"
+                ],
+                "summary": "Mostrar nivel de escolaridad por ID",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Schooling"
+                ],
+                "summary": "Actualizar nombre de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Schooling"
+                ],
+                "summary": "Eliminar nivel de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        },
+        "/api/BloodType": {
+            "get": {
+                "tags": [
+                    "BloodType"
+                ],
+                "summary": "Mostrar todos los niveles de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "BloodType"
+                ],
+                "summary": "Registrar nivel de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        },
+        "/api/BloodType/{BloodType_id}": {
+            "get": {
+                "tags": [
+                    "BloodType"
+                ],
+                "summary": "Mostrar nivel de escolaridad por ID",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "BloodType"
+                ],
+                "summary": "Actualizar nombre de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "BloodType"
+                ],
+                "summary": "Eliminar nivel de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        },
+        "/api/Conventions": {
+            "get": {
+                "tags": [
+                    "Conventions"
+                ],
+                "summary": "Mostrar todos los niveles de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Conventions"
+                ],
+                "summary": "Registrar nivel de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        },
+        "/api/Conventions/{Conventionsid}": {
+            "put": {
+                "tags": [
+                    "Conventions"
+                ],
+                "summary": "Actualizar nombre de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        },
+        "/api/Conventions/{Conventions_id}": {
+            "get": {
+                "tags": [
+                    "Conventions"
+                ],
+                "summary": "Mostrar nivel de escolaridad por ID",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Conventions"
+                ],
+                "summary": "Eliminar nivel de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        },
+        "/api/DocumentType": {
+            "get": {
+                "tags": [
+                    "DocumentType"
+                ],
+                "summary": "Mostrar todos los niveles de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "DocumentType"
+                ],
+                "summary": "Registrar nivel de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        },
+        "/api/DocumentType/{DocumentType_id}": {
+            "get": {
+                "tags": [
+                    "DocumentType"
+                ],
+                "summary": "Mostrar nivel de escolaridad por ID",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "DocumentType"
+                ],
+                "summary": "Actualizar nombre de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "DocumentType"
+                ],
+                "summary": "Eliminar nivel de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        },
+        "/api/ExaminationStatus": {
+            "get": {
+                "tags": [
+                    "ExaminationStatus"
+                ],
+                "summary": "Mostrar todos los niveles de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "ExaminationStatus"
+                ],
+                "summary": "Registrar nivel de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        },
+        "/api/ExaminationStatus/{ExaminationStatus_id}": {
+            "get": {
+                "tags": [
+                    "ExaminationStatus"
+                ],
+                "summary": "Mostrar nivel de escolaridad por ID",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "ExaminationStatus"
+                ],
+                "summary": "Actualizar nombre de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "ExaminationStatus"
+                ],
+                "summary": "Eliminar nivel de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        },
+        "/api/MaritalStatus": {
+            "get": {
+                "tags": [
+                    "MaritalStatus"
+                ],
+                "summary": "Mostrar todos los niveles de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "MaritalStatus"
+                ],
+                "summary": "Registrar nivel de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        },
+        "/api/MaritalStatus/{MaritalStatus_id}": {
+            "get": {
+                "tags": [
+                    "MaritalStatus"
+                ],
+                "summary": "Mostrar nivel de escolaridad por ID",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "MaritalStatus"
+                ],
+                "summary": "Actualizar nombre de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "MaritalStatus"
+                ],
+                "summary": "Eliminar nivel de escolaridad",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todos los usuarios."
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Schooling",
+            "description": "CRUD Escolaridad"
+        },
+        {
+            "name": "BloodType",
+            "description": "CRUD Tipo de Sangre"
+        },
+        {
+            "name": "Conventions",
+            "description": "CRUD Convenios"
+        },
+        {
+            "name": "DocumentType",
+            "description": "CRUD Tipo de Documento"
+        },
+        {
+            "name": "ExaminationStatus",
+            "description": "CRUD Estado Examen"
+        },
+        {
+            "name": "MaritalStatus",
+            "description": "CRUD Estado Civil"
+        }
+    ]
+}
