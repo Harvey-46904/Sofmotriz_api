@@ -36,6 +36,27 @@
                     "Schooling"
                 ],
                 "summary": "Registrar nivel de escolaridad",
+                "requestBody": {
+                    "description": "dato enviar por formulario",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "level_schooling"
+                                ],
+                                "properties": {
+                                    "level_schooling": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "Primaria"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -60,6 +81,27 @@
                     "Schooling"
                 ],
                 "summary": "Actualizar nombre de escolaridad",
+                "requestBody": {
+                    "description": "dato enviar por formulario",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "level_schooling"
+                                ],
+                                "properties": {
+                                    "level_schooling": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "Primaria"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -83,7 +125,7 @@
                 "tags": [
                     "BloodType"
                 ],
-                "summary": "Mostrar todos los niveles de escolaridad",
+                "summary": "Mostrar todos los tipo de sangre",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -94,7 +136,28 @@
                 "tags": [
                     "BloodType"
                 ],
-                "summary": "Registrar nivel de escolaridad",
+                "summary": "Registrar tipo de sangre",
+                "requestBody": {
+                    "description": "dato enviar por formulario",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "type"
+                                ],
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "O+"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -107,7 +170,7 @@
                 "tags": [
                     "BloodType"
                 ],
-                "summary": "Mostrar nivel de escolaridad por ID",
+                "summary": "Mostrar tipo de sangre por ID",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -118,7 +181,28 @@
                 "tags": [
                     "BloodType"
                 ],
-                "summary": "Actualizar nombre de escolaridad",
+                "summary": "Actualizar tipo de sangre",
+                "requestBody": {
+                    "description": "dato enviar por formulario",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "type"
+                                ],
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "A-"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -129,7 +213,7 @@
                 "tags": [
                     "BloodType"
                 ],
-                "summary": "Eliminar nivel de escolaridad",
+                "summary": "Eliminar tipo de sangre",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -142,7 +226,7 @@
                 "tags": [
                     "Conventions"
                 ],
-                "summary": "Mostrar todos los niveles de escolaridad",
+                "summary": "Mostrar todos los convenios",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -153,7 +237,63 @@
                 "tags": [
                     "Conventions"
                 ],
-                "summary": "Registrar nivel de escolaridad",
+                "summary": "Registrar los convenios",
+                "requestBody": {
+                    "description": "dato enviar por formulario",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "company_name"
+                                ],
+                                "properties": {
+                                    "company_name": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "HACHE"
+                                    },
+                                    "nit": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "12345678"
+                                    },
+                                    "address": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "mf k rosas"
+                                    },
+                                    "department": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "Nariño"
+                                    },
+                                    "city": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "Pasto"
+                                    },
+                                    "phone": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "3225785525"
+                                    },
+                                    "representative": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "Kira"
+                                    },
+                                    "state": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "Activo"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -166,7 +306,63 @@
                 "tags": [
                     "Conventions"
                 ],
-                "summary": "Actualizar nombre de escolaridad",
+                "summary": "Actualizar los convenios",
+                "requestBody": {
+                    "description": "dato enviar por formulario",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "level_schooling"
+                                ],
+                                "properties": {
+                                    "company_name": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "HACHE"
+                                    },
+                                    "nit": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "12345678"
+                                    },
+                                    "address": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "mf k rosas"
+                                    },
+                                    "department": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "Nariño"
+                                    },
+                                    "city": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "Pasto"
+                                    },
+                                    "phone": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "3225785525"
+                                    },
+                                    "representative": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "Kira"
+                                    },
+                                    "state": {
+                                        "type": "string",
+                                        "format": "text",
+                                        "example": "Activo"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -179,7 +375,7 @@
                 "tags": [
                     "Conventions"
                 ],
-                "summary": "Mostrar nivel de escolaridad por ID",
+                "summary": "Mostrar los convenios por  ID",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -190,7 +386,7 @@
                 "tags": [
                     "Conventions"
                 ],
-                "summary": "Eliminar nivel de escolaridad",
+                "summary": "Eliminar los convenios",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -214,7 +410,28 @@
                 "tags": [
                     "DocumentType"
                 ],
-                "summary": "Registrar nivel de escolaridad",
+                "summary": "Registrar tipo de documento",
+                "requestBody": {
+                    "description": "dato enviar por formulario",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "type"
+                                ],
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "CC"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -227,7 +444,7 @@
                 "tags": [
                     "DocumentType"
                 ],
-                "summary": "Mostrar nivel de escolaridad por ID",
+                "summary": "Mostrar tipo de documento por ID",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -238,7 +455,28 @@
                 "tags": [
                     "DocumentType"
                 ],
-                "summary": "Actualizar nombre de escolaridad",
+                "summary": "Actualizar tipo de documento",
+                "requestBody": {
+                    "description": "dato enviar por formulario",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "type"
+                                ],
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "CC"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -249,7 +487,7 @@
                 "tags": [
                     "DocumentType"
                 ],
-                "summary": "Eliminar nivel de escolaridad",
+                "summary": "Eliminar tipo de documento",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -262,7 +500,7 @@
                 "tags": [
                     "ExaminationStatus"
                 ],
-                "summary": "Mostrar todos los niveles de escolaridad",
+                "summary": "Mostrar todos los estados de examen",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -273,7 +511,28 @@
                 "tags": [
                     "ExaminationStatus"
                 ],
-                "summary": "Registrar nivel de escolaridad",
+                "summary": "Registrar estados de examen",
+                "requestBody": {
+                    "description": "dato enviar por formulario",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "state"
+                                ],
+                                "properties": {
+                                    "state": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "Aprobado"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -286,7 +545,7 @@
                 "tags": [
                     "ExaminationStatus"
                 ],
-                "summary": "Mostrar nivel de escolaridad por ID",
+                "summary": "Mostrar estados de examen por ID",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -297,7 +556,28 @@
                 "tags": [
                     "ExaminationStatus"
                 ],
-                "summary": "Actualizar nombre de escolaridad",
+                "summary": "Actualizar estados de examen",
+                "requestBody": {
+                    "description": "dato enviar por formulario",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "state"
+                                ],
+                                "properties": {
+                                    "state": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "Aprobado"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -308,7 +588,7 @@
                 "tags": [
                     "ExaminationStatus"
                 ],
-                "summary": "Eliminar nivel de escolaridad",
+                "summary": "Eliminar estados de examen",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -321,7 +601,7 @@
                 "tags": [
                     "MaritalStatus"
                 ],
-                "summary": "Mostrar todos los niveles de escolaridad",
+                "summary": "Mostrar estado civil",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -332,7 +612,28 @@
                 "tags": [
                     "MaritalStatus"
                 ],
-                "summary": "Registrar nivel de escolaridad",
+                "summary": "Registrar estado civil",
+                "requestBody": {
+                    "description": "dato enviar por formulario",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "state"
+                                ],
+                                "properties": {
+                                    "state": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "Casado"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -345,7 +646,7 @@
                 "tags": [
                     "MaritalStatus"
                 ],
-                "summary": "Mostrar nivel de escolaridad por ID",
+                "summary": "Mostrar estado civil por ID",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -356,7 +657,28 @@
                 "tags": [
                     "MaritalStatus"
                 ],
-                "summary": "Actualizar nombre de escolaridad",
+                "summary": "Actualizar estado civil",
+                "requestBody": {
+                    "description": "dato enviar por formulario",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "state"
+                                ],
+                                "properties": {
+                                    "state": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "Casado"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."
@@ -367,7 +689,7 @@
                 "tags": [
                     "MaritalStatus"
                 ],
-                "summary": "Eliminar nivel de escolaridad",
+                "summary": "Eliminar estado civil",
                 "responses": {
                     "200": {
                         "description": "Mostrar todos los usuarios."

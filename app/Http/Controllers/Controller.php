@@ -22,7 +22,7 @@ use Illuminate\Routing\Controller as BaseController;
  * )
  *
  * @OA\Server(
- *      url="http://localhost/Softmotriz/public",
+ *      url="https://apis.softmotriz.com",
  *      description=" API Server"
  * )
 
@@ -68,15 +68,31 @@ use Illuminate\Routing\Controller as BaseController;
         *     tags={"Schooling"},
         *     path="/api/Schooling",
         *     summary="Registrar nivel de escolaridad",
+        *     @OA\RequestBody(
+        *          required=true,
+        *          description="dato enviar por formulario",
+        *          @OA\JsonContent(
+        *              required={"level_schooling"},
+        *              @OA\Property(property="level_schooling", type="string", format="email", example="Primaria"),
+        *          )
+        *     ),
         *     @OA\Response(
         *         response=200,
         *         description="Mostrar todos los usuarios."
-        *     )
+        *     )      
         * )
         * @OA\Put(
         *     tags={"Schooling"},
         *     path="/api/Schoolings/{Schooling_id}",
         *     summary="Actualizar nombre de escolaridad",
+        *     @OA\RequestBody(
+        *          required=true,
+        *          description="dato enviar por formulario",
+        *          @OA\JsonContent(
+        *              required={"level_schooling"},
+        *              @OA\Property(property="level_schooling", type="string", format="email", example="Primaria"),
+        *          )
+        *     ),
         *     @OA\Response(
         *         response=200,
         *         description="Mostrar todos los usuarios."
@@ -103,7 +119,7 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Get(
         *     tags={"BloodType"},
         *     path="/api/BloodType",
-        *     summary="Mostrar todos los niveles de escolaridad",
+        *     summary="Mostrar todos los tipo de sangre",
         *     @OA\Response(
         *         response=200,
         *         description="Mostrar todos los usuarios."
@@ -112,7 +128,15 @@ use Illuminate\Routing\Controller as BaseController;
         * @OA\Post(
         *     tags={"BloodType"},
         *     path="/api/BloodType",
-        *     summary="Registrar nivel de escolaridad",
+        *     summary="Registrar tipo de sangre",
+        *     @OA\RequestBody(
+        *          required=true,
+        *          description="dato enviar por formulario",
+        *          @OA\JsonContent(
+        *              required={"type"},
+        *              @OA\Property(property="type", type="string", format="email", example="O+"),
+        *          )
+        *     ),
         *     @OA\Response(
         *         response=200,
         *         description="Mostrar todos los usuarios."
@@ -121,7 +145,15 @@ use Illuminate\Routing\Controller as BaseController;
         * @OA\Put(
         *     tags={"BloodType"},
         *     path="/api/BloodType/{BloodType_id}",
-        *     summary="Actualizar nombre de escolaridad",
+        *     summary="Actualizar tipo de sangre",
+        *     @OA\RequestBody(
+        *          required=true,
+        *          description="dato enviar por formulario",
+        *          @OA\JsonContent(
+        *              required={"type"},
+        *              @OA\Property(property="type", type="string", format="email", example="A-"),
+        *          )
+        *     ),
         *     @OA\Response(
         *         response=200,
         *         description="Mostrar todos los usuarios."
@@ -130,7 +162,7 @@ use Illuminate\Routing\Controller as BaseController;
         * @OA\Delete(
         *     tags={"BloodType"},
         *     path="/api/BloodType/{BloodType_id}",
-        *     summary="Eliminar nivel de escolaridad",
+        *     summary="Eliminar tipo de sangre",
         *     @OA\Response(
         *         response=200,
         *         description="Mostrar todos los usuarios."
@@ -139,7 +171,7 @@ use Illuminate\Routing\Controller as BaseController;
         * @OA\Get(
         *     tags={"BloodType"},
         *     path="/api/BloodType/{BloodType_id}",
-        *     summary="Mostrar nivel de escolaridad por ID",
+        *     summary="Mostrar tipo de sangre por ID",
         *     @OA\Response(
         *         response=200,
         *         description="Mostrar todos los usuarios."
@@ -148,7 +180,7 @@ use Illuminate\Routing\Controller as BaseController;
   * @OA\Get(
     *     tags={"Conventions"},
     *     path="/api/Conventions",
-    *     summary="Mostrar todos los niveles de escolaridad",
+    *     summary="Mostrar todos los convenios",
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -157,7 +189,22 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Post(
     *     tags={"Conventions"},
     *     path="/api/Conventions",
-    *     summary="Registrar nivel de escolaridad",
+    *     summary="Registrar los convenios",
+        *     @OA\RequestBody(
+        *          required=true,
+        *          description="dato enviar por formulario",
+        *          @OA\JsonContent(
+        *              required={"company_name"},
+        *              @OA\Property(property="company_name", type="string", format="text", example="HACHE"),
+        *              @OA\Property(property="nit", type="string", format="text", example="12345678"),
+        *                @OA\Property(property="address", type="string", format="text", example="mf k rosas"),
+        *                @OA\Property(property="department", type="string", format="text", example="Nariño"),
+        *                @OA\Property(property="city", type="string", format="text", example="Pasto"),
+        *                @OA\Property(property="phone", type="string", format="text", example="3225785525"),
+        *                @OA\Property(property="representative", type="string", format="text", example="Kira"),
+        *                @OA\Property(property="state", type="string", format="text", example="Activo"),
+        *          )
+        *     ),
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -166,7 +213,22 @@ use Illuminate\Routing\Controller as BaseController;
      * @OA\Put(
     *     tags={"Conventions"},
     *     path="/api/Conventions/{Conventionsid}",
-    *     summary="Actualizar nombre de escolaridad",
+    *     summary="Actualizar los convenios",
+          *     @OA\RequestBody(
+        *          required=true,
+        *          description="dato enviar por formulario",
+        *          @OA\JsonContent(
+        *              required={"level_schooling"},
+        *             @OA\Property(property="company_name", type="string", format="text", example="HACHE"),
+        *              @OA\Property(property="nit", type="string", format="text", example="12345678"),
+        *                @OA\Property(property="address", type="string", format="text", example="mf k rosas"),
+        *                @OA\Property(property="department", type="string", format="text", example="Nariño"),
+        *                @OA\Property(property="city", type="string", format="text", example="Pasto"),
+        *                @OA\Property(property="phone", type="string", format="text", example="3225785525"),
+        *                @OA\Property(property="representative", type="string", format="text", example="Kira"),
+        *                @OA\Property(property="state", type="string", format="text", example="Activo"),
+        *          )
+        *     ),
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -175,7 +237,7 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Delete(
     *     tags={"Conventions"},
     *     path="/api/Conventions/{Conventions_id}",
-    *     summary="Eliminar nivel de escolaridad",
+    *     summary="Eliminar los convenios",
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -184,7 +246,7 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Get(
     *     tags={"Conventions"},
     *     path="/api/Conventions/{Conventions_id}",
-    *     summary="Mostrar nivel de escolaridad por ID",
+    *     summary="Mostrar los convenios por  ID",
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -204,7 +266,15 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Post(
     *     tags={"DocumentType"},
     *     path="/api/DocumentType",
-    *     summary="Registrar nivel de escolaridad",
+    *     summary="Registrar tipo de documento",
+        *     @OA\RequestBody(
+        *          required=true,
+        *          description="dato enviar por formulario",
+        *          @OA\JsonContent(
+        *                required={"type"},
+        *              @OA\Property(property="type", type="string", format="email", example="CC"),
+        *          )
+        *     ),
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -213,7 +283,15 @@ use Illuminate\Routing\Controller as BaseController;
      * @OA\Put(
     *     tags={"DocumentType"},
     *     path="/api/DocumentType/{DocumentType_id}",
-    *     summary="Actualizar nombre de escolaridad",
+    *     summary="Actualizar tipo de documento",
+        *     @OA\RequestBody(
+        *          required=true,
+        *          description="dato enviar por formulario",
+        *          @OA\JsonContent(
+       *                required={"type"},
+        *              @OA\Property(property="type", type="string", format="email", example="CC"),
+        *          )
+        *     ),
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -222,7 +300,7 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Delete(
     *     tags={"DocumentType"},
     *     path="/api/DocumentType/{DocumentType_id}",
-    *     summary="Eliminar nivel de escolaridad",
+    *     summary="Eliminar tipo de documento",
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -231,7 +309,7 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Get(
     *     tags={"DocumentType"},
     *     path="/api/DocumentType/{DocumentType_id}",
-    *     summary="Mostrar nivel de escolaridad por ID",
+    *     summary="Mostrar tipo de documento por ID",
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -242,7 +320,7 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Get(
     *     tags={"ExaminationStatus"},
     *     path="/api/ExaminationStatus",
-    *     summary="Mostrar todos los niveles de escolaridad",
+    *     summary="Mostrar todos los estados de examen",
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -251,7 +329,15 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Post(
     *     tags={"ExaminationStatus"},
     *     path="/api/ExaminationStatus",
-    *     summary="Registrar nivel de escolaridad",
+    *     summary="Registrar estados de examen",
+        *     @OA\RequestBody(
+        *          required=true,
+        *          description="dato enviar por formulario",
+        *          @OA\JsonContent(
+        *                required={"state"},
+        *              @OA\Property(property="state", type="string", format="email", example="Aprobado"),
+        *          )
+        *     ),
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -260,7 +346,15 @@ use Illuminate\Routing\Controller as BaseController;
      * @OA\Put(
     *     tags={"ExaminationStatus"},
     *     path="/api/ExaminationStatus/{ExaminationStatus_id}",
-    *     summary="Actualizar nombre de escolaridad",
+    *     summary="Actualizar estados de examen",
+        *     @OA\RequestBody(
+        *          required=true,
+        *          description="dato enviar por formulario",
+        *          @OA\JsonContent(
+        *                required={"state"},
+        *              @OA\Property(property="state", type="string", format="email", example="Aprobado"),
+        *          )
+        *     ),
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -269,7 +363,7 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Delete(
     *     tags={"ExaminationStatus"},
     *     path="/api/ExaminationStatus/{ExaminationStatus_id}",
-    *     summary="Eliminar nivel de escolaridad",
+    *     summary="Eliminar estados de examen",
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -278,7 +372,7 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Get(
     *     tags={"ExaminationStatus"},
     *     path="/api/ExaminationStatus/{ExaminationStatus_id}",
-    *     summary="Mostrar nivel de escolaridad por ID",
+    *     summary="Mostrar estados de examen por ID",
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -289,7 +383,7 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Get(
     *     tags={"MaritalStatus"},
     *     path="/api/MaritalStatus",
-    *     summary="Mostrar todos los niveles de escolaridad",
+    *     summary="Mostrar estado civil",
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -298,7 +392,15 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Post(
     *     tags={"MaritalStatus"},
     *     path="/api/MaritalStatus",
-    *     summary="Registrar nivel de escolaridad",
+    *     summary="Registrar estado civil",
+        *     @OA\RequestBody(
+        *          required=true,
+        *          description="dato enviar por formulario",
+        *          @OA\JsonContent(
+        *                required={"state"},
+        *              @OA\Property(property="state", type="string", format="email", example="Casado"),
+        *          )
+        *     ),
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -307,7 +409,15 @@ use Illuminate\Routing\Controller as BaseController;
      * @OA\Put(
     *     tags={"MaritalStatus"},
     *     path="/api/MaritalStatus/{MaritalStatus_id}",
-    *     summary="Actualizar nombre de escolaridad",
+    *     summary="Actualizar estado civil",
+        *     @OA\RequestBody(
+        *          required=true,
+        *          description="dato enviar por formulario",
+        *          @OA\JsonContent(
+        *                required={"state"},
+        *              @OA\Property(property="state", type="string", format="email", example="Casado"),
+        *          )
+        *     ),
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -316,7 +426,7 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Delete(
     *     tags={"MaritalStatus"},
     *     path="/api/MaritalStatus/{MaritalStatus_id}",
-    *     summary="Eliminar nivel de escolaridad",
+    *     summary="Eliminar estado civil",
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
@@ -325,7 +435,7 @@ use Illuminate\Routing\Controller as BaseController;
     * @OA\Get(
     *     tags={"MaritalStatus"},
     *     path="/api/MaritalStatus/{MaritalStatus_id}",
-    *     summary="Mostrar nivel de escolaridad por ID",
+    *     summary="Mostrar estado civil por ID",
     *     @OA\Response(
     *         response=200,
     *         description="Mostrar todos los usuarios."
