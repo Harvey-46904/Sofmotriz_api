@@ -24,3 +24,4 @@ Route::resource('Conventions','ConventionsController',['except'=>['create']]);
 Route::resource('DocumentType','DocumentTypeController',['except'=>['create']]);
 Route::resource('ExaminationStatus','ExaminationStatusController',['except'=>['create']]);
 Route::resource('MaritalStatus','MaritalStatusController',['except'=>['create']]);
+Route::resource('profesional','ProfesionalController',['except'=>['create']]);
